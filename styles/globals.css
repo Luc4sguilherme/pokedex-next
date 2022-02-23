@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #efefbb;
+  background: linear-gradient(to right, rgb(197, 230, 236), rgb(239, 187, 230));
+  color: white;
+  margin: 0;
+  font-family: rubik;
+}
+
+h1 {
+  text-align: center;
+  font-size: 54px;
+}
+
+@media only screen and (max-width: 280px) {
+  h1 {
+    text-align: center;
+    font-size: 34px;
+  }
+}
