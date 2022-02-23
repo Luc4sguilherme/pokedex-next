@@ -35,7 +35,7 @@ function App({ pokemons: pokemonsPreloaded }) {
   }, []);
 
   useEffect(() => {
-    const grid = document.querySelector(".pokedex");
+    const grid = document.querySelector(".infinite-scroll-component");
 
     if (grid) {
       const gridComputedStyle = window.getComputedStyle(grid);
