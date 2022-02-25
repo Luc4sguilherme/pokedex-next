@@ -22,7 +22,7 @@ function App({ pokemons: pokemonsPreloaded }) {
     }
 
     getPokemons(limit, offset).then(({ results }) => {
-      Promise.all(results.map((data) => getPokemon(data.url))).then((pokemon) => {
+      Promise.all(results.map((data) => getPokemon(data.name))).then((pokemon) => {
         setPokemons([...pokemons, ...pokemon]);
       });
     });
@@ -75,7 +75,7 @@ function App({ pokemons: pokemonsPreloaded }) {
 export async function getStaticProps() {
   try {
     const { results } = await getPokemons(50, 0);
-    const promises = results.map((data) => getPokemon(data.url));
+    const promises = results.map((data) => getPokemon(data.name));
     const data = await Promise.all(promises);
     const pokemons = data.map((pokemon) => {
       return {

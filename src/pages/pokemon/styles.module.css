@@ -1,0 +1,147 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 650px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 25px;
+  color: #000;
+}
+
+.wrapperTop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.backBtn {
+  background: none;
+  border: 0;
+  width: 45px;
+  cursor: pointer;
+  text-align: start;
+  transition: opacity 0.1s ease-in;
+}
+
+.backBtn:hover {
+  opacity: 0.5;
+}
+
+.infos {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: auto;
+  box-sizing: border-box;
+  grid-gap: 5px;
+  justify-content: end;
+  margin-top: 50px;
+}
+
+.types {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.name {
+  text-transform: capitalize;
+  flex: 1;
+  text-align: center;
+}
+
+.stats {
+  text-transform: capitalize;
+}
+
+.infos div {
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.infos div span {
+  margin-left: 5px;
+}
+
+div.type {
+  text-transform: capitalize;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 25px;
+  width: auto;
+  margin-left: 5px;
+  padding: 2px 5px;
+}
+
+@media only screen and (max-width: 750px) {
+  .name {
+    font-size: 1.8rem;
+  }
+
+  .wrapper {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+    justify-content: space-around;
+  }
+
+  .wrapperTop {
+    flex-direction: column-reverse;
+  }
+
+  .backBtn {
+    align-self: flex-end;
+    text-align: center;
+  }
+
+  .image {
+    height: 200px;
+    margin: 50px auto;
+  }
+
+  .infos {
+    grid-template-columns: 200px 200px;
+    justify-content: space-evenly;
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+
+  .infos div {
+    height: 35px;
+  }
+}
+
+@media only screen and (max-width: 520px) {
+  .name {
+    font-size: 1.5rem;
+  }
+
+  .image {
+    height: 170px;
+    margin: 30px auto;
+  }
+
+  .infos {
+    grid-template-columns: 150px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-size: 14px;
+  }
+
+  .infos div {
+    height: 30px;
+  }
+}
